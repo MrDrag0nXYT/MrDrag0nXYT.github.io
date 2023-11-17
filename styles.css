@@ -1,0 +1,120 @@
+body{
+    font-family: Montserrat;
+    color: #fffafa;
+    background-image: url('images/slv-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center 0%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#title{
+    background-color: #303030C0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    backdrop-filter: blur(1px);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+
+#main{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#mainForm {
+    display: flex;
+    text-align: center;
+    align-items: top;
+    padding: 20px;
+    background-color: #30303050;
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#about p{
+    padding-bottom: 0;
+}
+
+#about ul{
+    text-align: left;
+    padding-top: 3px;
+}
+
+#links{
+    margin-top: 15%;
+    position: flex;
+    bottom: 15px;
+}
+
+#linkButton{
+    transition: 0.3s ease;
+}
+
+#linkButton:hover{
+    transform: scale(1.2);
+}
+
+
+
+#mainForm img{
+    border-radius: 10px;
+    width: 480px;
+    height: auto;
+    margin-right: 20px;
+}
+
+#innerForm h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    text-shadow: 0px 3px 0px #da4ad1;
+}
+
+#innerForm p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#innerForm a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+#innerForm a img {
+    width: 40px;
+    height: 40px;
+    filter: invert(75%) sepia(128%) saturate(1750%) hue-rotate(199deg) brightness(100%) contrast(100%);
+}
+
+
+
+#footer {
+    background-color: #303030C0;
+    color: #fffafa;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    backdrop-filter: blur(1px);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
