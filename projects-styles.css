@@ -166,49 +166,13 @@ body{
     font-size: 64px;
 }
 
-
-#mainForm {
-    display: flex;
+#returnButton{
     text-align: center;
-    align-items: top;
-    padding: 20px;
-    background-color: #30303050;
-    backdrop-filter: blur(3px);
+    padding: 10px 50px;
+    margin: 10px;
+    background-color: #fffafa30;
+    font-size: 36px;
     border-radius: 10px;
-}
-
-#mainForm img{
-    max-width: 720px;
-    max-height: 720px;
-    object-fit: cover;
-}
-
-@media screen and (max-width: 480px) {
-    #main{
-        flex: 1;
-        align-items: center;
-        justify-content: center;
-        padding-top: 0px;
-        padding-bottom: 150px;
-    }
-
-    #main h1{
-        font-size: 48px;
-    }
-
-    #mainForm {
-        max-width: 340px;
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    #mainForm img {
-        max-width: 340px;
-        max-height: 340px;
-        margin-right: 0;
-        margin-bottom: 10px;
-        object-fit: cover;
-    }
 }
 
 
