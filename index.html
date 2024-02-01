@@ -1,76 +1,187 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="ru" theme="dark">
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/icon.webp" />
 
-    <title>Солевой</title>
-    <link rel="icon" href="images/icon.jpg">
+    <script defer src="js/index.js"></script>
+    <link rel="stylesheet" href="index.css" />
 
-    <script defer src="script.js"></script>
+    <title>Дракоша (Солевой)</title>
+  </head>
 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="Montserrat-Regular.ttf">
-</head>
-<body>
-    <div id="title">
-        <ul id="headerButtons">
-            <li><a href="#"><div>Главная</div></a></li>
-            <li><a href="projects.html"><div>Мои проекты</div></a></li>
-            <li><a href="https://www.donationalerts.com/r/mrdrag0nxyt" target="_blank"><div>Дать мне денег</div></a></li>
-        </ul>
+  <body>
+    <nav id="navbar">
+      <div class="nav-links">
+        <a href="#">
+          <div class="button">Главная</div>
+        </a>
+        <a href="#projects">
+          <div class="button">Мои проекты</div>
+        </a>
+        <a href="###" onclick="toggleTheme()">
+          <div class="button">Сменить тему</div>
+        </a>
+        <a href="https://www.donationalerts.com/r/mrdrag0nxyt">
+          <div class="button">Дать мне денег</div>
+        </a>
+      </div>
+    </nav>
 
-        <a id="mobileMenuButton" onclick="toggleMenu()"><img id="mobileMenuButtonIMG" src="images/menu.svg"></a>
-    </div>
+    <a
+      id="toggle-mobile-menu"
+      onclick="toggleMobileMenu()"
+      class="button link-button"
+    >
+      <img id="toggle-mobile-menu-icon" src="img/icons/menu.svg" />
+    </a>
 
-    
+    <div id="page">
+      <h1 class="main-header" id="page-header">Главная</h1>
 
-    <div id="mobileMenu">
-        <ul>
-            <li><a href="#"><div>Главная</div></a></li>
-            <li><a href="projects.html"><div>Мои проекты</div></a></li>
-            <li><a href="https://www.donationalerts.com/r/mrdrag0nxyt" target="_blank"><div>Дать мне денег</div></a></li>
-        </ul>
-    </div>
+      <div id="title">
+        <div class="main" id="welcome">
+          <div class="main-title">
+            <h2 class="main-header mt mb">Добро пожаловать!</h2>
+            <p>Спасибо что заглянул на мою страничку</p>
+            <span class="subtitle-span mb"
+              >(кстати зацени какую карточку сделал)</span
+            >
 
+            <a href="#about" class="button">
+              <div>Обо мне</div>
+            </a>
+          </div>
+          <div class="title-card">
+            <div id="figure-behind-card"></div>
 
+            <a href="#about">
+              <div class="card" id="main-card">
+                <img src="img/icon.webp" />
+                <div class="card-subtitle">
+                  <div>
+                    <h1><span>MrDrag0nXYT</span>,</h1>
+                    <h4>он же <span>Дракоша (Солевой)</span></h4>
+                  </div>
 
-    <div id="main">
-        <h1>Обо мне</h1>
-
-        <div id="mainForm">
-            <img src="images/icon.jpg">
-
-            <div id="innerForm">
-                <h1><b>Дракоша Солевой</b></h1>
-
-                <div id="about">
-                    <p>В общем, что я могу о себе рассказать:</p>
-                    
-                    <ul style="text-align: left">
-                        <li>17 годиков</li>
-                        <li>Начинающий кодер на Java</li>
-                        <li>Выбрал чтобы писать плагины на майнкрафт ;) (вопросы?)</li>
-                        <li>Собираюсь заниматься BackEnd'ом</li>
-                        <li>Потом допридумаю</li>
-                    </ul>
+                  <p>[ 01.2022 ]</p>
                 </div>
-
-                <div id="links">
-                    <p>Ссылки на мой профиль:</p>
-                    <a href="https://discordapp.com/users/519149500338798604" target="_blank"><img id="linkButton" src="images/discord.svg" alt="Discord"></a>
-                    <a href="https://t.me/drakoshaslv" target="_blank"><img id="linkButton" src="images/telegram.svg" alt="Telegram"></a>
-                    <a href="https://vk.com/MrDrag0nXYT" target="_blank"><img id="linkButton" src="images/vk.svg" alt="VK"></a>
-                    <a href="https://github.com/MrDrag0nXYT" target="_blank"><img id="linkButton" src="images/github.svg" alt="GitHub"></a>
-                </div>
-            </div>
+              </div>
+            </a>
+          </div>
         </div>
+      </div>
+
+      <div id="about"></div>
+
+      <h1 class="main-header" id="page-header">Обо мне</h1>
+
+      <div class="main">
+        <div class="main-title">
+          <br />
+          <p>Итак, давай расскажу немного <span>о себе:</span></p>
+          <br />
+          <ul>
+            <li><span>17</span> годиков</li>
+            <li>Начинающий кодер <span>на Java</span></li>
+            <li>
+              Выбрал <span>Java</span> чтобы писать плагины на майнкрафт ;)
+              <span class="subtitle-span">(вопросы?)</span>
+            </li>
+            <li>Любитель <span>BackEnd'а</span></li>
+            <li>Потом допридумаю</li>
+          </ul>
+          <br />
+          <p style="margin-top: 1.5rem">Ссылки на мой профиль:</p>
+          <div class="nav-links link-buttons-column">
+            <a class="button link-button" href="https://t.me/drakoshaslv">
+              <div>
+                <img src="img/icons/telegram.svg" />
+              </div>
+            </a>
+            <a
+              class="button link-button"
+              href="https://discordapp.com/users/519149500338798604"
+            >
+              <div>
+                <img src="img/icons/discord.svg" />
+              </div>
+            </a>
+            <a class="button link-button" href="https://vk.com/MrDrag0nXYT">
+              <div>
+                <img src="img/icons/vk.svg" />
+              </div>
+            </a>
+            <a class="button link-button" href="https://github.com/MrDrag0nXYT">
+              <div>
+                <img src="img/icons/github.svg" />
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <div id="projects"></div>
 
-    <div id="footer">
-        <p style="color: #C0C0C0;">Дракоша Солевой, &copy; 2023 век до н.э.</p>
-        <p style="color: #494949;">Icons by <a style="color: #494949;" href="https://icons8.com">icons8</a></p>
+    <h1 class="main-header" id="page-header">Мои проекты</h1>
+
+    <div class="main projects">
+      <div class="project-card">
+        <img class="project-card-img" src="img/projects/betterdonate-bg.webp" />
+        <img
+          class="project-card-logo"
+          src="img/projects/betterdonate-logo.webp"
+        />
+
+        <div class="project-card-text">
+          <h2 class="main-header">BetterDonate</h2>
+          <br />
+          <p>
+            Плагин на корзину для товаров с удобной системой получения для
+            игроков
+          </p>
+        </div>
+        <a
+          href="https://github.com/MrDrag0nXYT/BetterDonate"
+          class="button"
+          style="margin-top: 1rem"
+        >
+          <img src="img/icons/github.svg" style="margin-right: 0.5em" />
+          Подробнее
+        </a>
+      </div>
+
+      <div class="project-card">
+        <img class="project-card-img" src="img/projects/mainsite-bg.webp" />
+        <img class="project-card-logo" src="img/icon.webp" />
+
+        <div class="project-card-text">
+          <h2 class="main-header">Этот сайт</h2>
+          <br />
+          <p>Красивый (наверное) сайт-визитка для себя любимого</p>
+        </div>
+        <a
+          href="#projects"
+          onclick="alert('Так вы и так здесь...')"
+          class="button"
+          style="margin-top: 1rem"
+        >
+          Подробнее
+        </a>
+      </div>
+
+      <div class="project-card">
+        <h2 class="subtitle-span">Скоро...</h2>
+      </div>
     </div>
-</body>
+
+    <footer id="footer">
+      <p>Дракоша (Солевой), © 2023-2024 век до н.э.</p>
+      <p style="margin-top: 1rem; font-size: small;">
+        Icons by <a href="https://icons8.com">icons8.com</a>
+      </p>
+    </footer>
+  </body>
 </html>

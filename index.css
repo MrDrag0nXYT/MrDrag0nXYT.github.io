@@ -1,0 +1,427 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("font/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("font/Montserrat-Bold.ttf");
+  font-weight: bold;
+}
+
+:root {
+  --blur-radius: 5px;
+
+  --bg-secondary-color: #f5f0f0d0;
+  --bg-third-color: #e5e0e077;
+  --bg-color: #fffafa;
+
+  --bg-opposite-color: #212121;
+
+  --text-color: #151515;
+  --text-accent-color: #a880ff;
+  --text-subtitle-color: #c0c0c0;
+}
+
+:root[theme="dark"] {
+  --blur-radius: 5px;
+
+  --bg-secondary-color: #303030d0;
+  --bg-third-color: #50505077;
+  --bg-color: #212121;
+
+  --bg-opposite-color: #fffafa;
+
+  --text-color: #fffafa;
+  --text-accent-color: #a880ff;
+  --text-subtitle-color: #c0c0c0;
+}
+
+* {
+  margin: 0;
+}
+
+span {
+  color: var(--text-accent-color);
+  text-shadow: 0 0 3px var(--text-accent-color);
+}
+
+.subtitle-span {
+  color: var(--text-subtitle-color);
+  text-shadow: 0 0 3px var(--text-subtitle-color);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+html,
+body {
+  font-family: Montserrat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  height: 100%;
+
+  color: var(--text-color);
+}
+
+html[theme="dark"] {
+  background-image: url(img/bg-desktop-dark.webp);
+}
+
+html[theme="light"] {
+  background-image: url(img/bg-desktop-light.webp);
+}
+
+.mt {
+  margin-top: 1rem;
+}
+
+.mb {
+  margin-bottom: 1rem;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html[theme="dark"] {
+    background-image: url(img/bg-mobile-dark.webp);
+  }
+
+  html[theme="light"] {
+    background-image: url(img/bg-mobile-light.webp);
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  #welcome {
+    flex-direction: column-reverse;
+  }
+
+  .card {
+    margin-bottom: 3rem;
+  }
+
+  #main-card {
+    font-size: 2vw;
+  }
+
+  .card img {
+    min-width: 50vw;
+    min-height: 50vw;
+  }
+
+  #toggle-mobile-menu {
+    position: fixed;
+    z-index: 3611;
+
+    top: 1rem;
+    left: 1rem;
+  }
+
+  #navbar {
+    visibility: hidden;
+
+    justify-content: start;
+
+    top: 1rem;
+    right: 1rem;
+
+    width: 50%;
+    border-radius: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .link-buttons-column {
+    flex-direction: column;
+    display: grid !important;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  #toggle-mobile-menu {
+    visibility: hidden;
+  }
+
+  .projects {
+    flex-direction: column;
+  }
+}
+
+/* Навбар */
+
+nav {
+  background-color: var(--bg-secondary-color);
+
+  position: fixed;
+  width: 100%;
+
+  padding: 10px;
+  border-radius: 0 0 1rem 1rem;
+
+  text-align: center;
+  backdrop-filter: blur(var(--blur-radius));
+
+  top: 0;
+  z-index: 3611;
+
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.button {
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--text-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 150px;
+
+  transition: 0.3s ease;
+
+  background-color: var(--bg-third-color);
+}
+
+.button:hover {
+  background-color: var(--text-accent-color);
+  transform: scale(1.05) skew(-0.7deg, -0.7deg);
+}
+
+.link-button {
+  width: 7vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-accent-color);
+}
+
+#page {
+  height: max-content;
+  z-index: 0;
+}
+
+/* Основное */
+
+.title-card {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.main-title {
+  padding: 3rem;
+
+  margin: 0 3rem 0 3rem;
+
+  background-color: var(--bg-secondary-color);
+  backdrop-filter: blur(var(--blur-radius));
+  border-radius: 1rem;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  font-size: large;
+}
+
+.main-header {
+  text-align: center;
+  text-shadow: 0 0 0.5rem var(--text-accent-color);
+}
+
+#page-header {
+  margin-top: 7rem;
+  margin-bottom: 5rem;
+
+  font-size: 3rem;
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
+#figure-behind-card {
+  padding: 14vw;
+  padding-left: 29vw;
+
+  border-radius: 1rem 0 0 1rem;
+
+  position: absolute;
+  right: 0;
+
+  z-index: 1;
+
+  align-self: center;
+
+  background-color: var(--bg-secondary-color);
+  backdrop-filter: blur(var(--blur-radius));
+}
+
+/* Фотокарточка */
+
+#main-card {
+  position: relative;
+  z-index: 3;
+
+  margin-right: 5vw;
+}
+
+.card {
+  background-color: var(--bg-opposite-color);
+  padding: 1vw;
+  object-fit: cover;
+
+  color: var(--bg-color);
+
+  font-size: 1vw;
+
+  display: flex;
+  flex-flow: column wrap;
+
+  box-shadow: 0.5rem 0.5rem #151515, 1rem 1rem #070707;
+
+  transform: rotate(5deg) skewX(-10deg);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: rotate(2deg) scale(125%);
+
+  box-shadow: 0 0 1rem var(--bg-opposite-color);
+}
+
+.card img {
+  max-width: 25vw;
+  max-height: 25vw;
+}
+
+.card-subtitle {
+  padding-top: 1rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Карточка проекта */
+
+.project-card {
+  background-color: var(--bg-secondary-color);
+  backdrop-filter: blur(var(--blur-radius));
+
+  border-radius: 1rem;
+  padding: 1rem;
+
+  margin: 1rem;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project-card-text {
+  margin-top: -3vw;
+
+  word-wrap: break-word;
+  max-width: 64vw;
+}
+
+.project-card-img {
+  width: 64vw;
+  height: 36vw;
+
+  border-radius: 1rem;
+}
+
+@media screen and (min-width: 720px) {
+  .project-card-img {
+    min-width: 16rem;
+    min-height: 9rem;
+
+    width: 32vw;
+    height: 18vw;
+  }
+
+  .project-card-logo {
+    max-width: 4vw;
+    max-height: 4vw;
+
+    bottom: 4vw;
+  }
+
+  .project-card-text {
+    max-width: 32vw;
+  }
+
+  .projects {
+    flex-direction: row;
+  }
+}
+
+.project-card-logo {
+  max-width: 10vw;
+  max-height: 10vw;
+  border-radius: 100%;
+
+  bottom: 4vw;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* Футер */
+
+footer {
+  background-color: var(--bg-secondary-color);
+
+  padding: 10px;
+  margin-top: 3rem;
+  border-radius: 1rem 1rem 0 0;
+
+  text-align: center;
+  backdrop-filter: blur(var(--blur-radius));
+
+  bottom: 0;
+}
