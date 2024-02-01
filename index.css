@@ -396,7 +396,8 @@ a {
   }
 
   .projects {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: auto auto;
   }
 }
 
