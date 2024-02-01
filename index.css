@@ -394,11 +394,6 @@ a {
   .project-card-text {
     max-width: 32vw;
   }
-
-  .projects {
-    display: grid;
-    grid-template-columns: auto auto;
-  }
 }
 
 .project-card-logo {
@@ -411,6 +406,13 @@ a {
   position: relative;
   z-index: 2;
 }
+
+.projects {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+
 
 /* Футер */
 
