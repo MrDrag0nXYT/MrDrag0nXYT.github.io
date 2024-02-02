@@ -10,12 +10,12 @@ function toggleMobileMenu() {
   const navbar = document.getElementById("navbar");
   const icon = document.getElementById("toggle-mobile-menu-icon");
 
-  if (navbar.style.visibility == 'visible'){
-    navbar.style.visibility = "hidden";
+  if (navbar.style.display == 'flex'){
+    navbar.style.display = "none";
     icon.src = 'img/icons/menu.svg'
     
   } else {
-    navbar.style.visibility = "visible";
+    navbar.style.display = "flex";
     icon.src = 'img/icons/close.svg'
   }
 }

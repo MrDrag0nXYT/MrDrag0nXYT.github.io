@@ -69,12 +69,12 @@ body {
   color: var(--text-color);
 }
 
-html[theme="dark"] {
-  background-image: url(img/bg-desktop-dark.webp);
+html {
+  background-image: url(img/bg-desktop-light.webp);
 }
 
-html[theme="light"] {
-  background-image: url(img/bg-desktop-light.webp);
+html[theme="dark"] {
+  background-image: url(img/bg-desktop-dark.webp);
 }
 
 .mt {
@@ -98,12 +98,12 @@ html[theme="light"] {
 }
 
 @media screen and (max-width: 480px) {
+  html {
+    background-image: url(img/bg-mobile-light.webp);
+  }
+  
   html[theme="dark"] {
     background-image: url(img/bg-mobile-dark.webp);
-  }
-
-  html[theme="light"] {
-    background-image: url(img/bg-mobile-light.webp);
   }
 
   .main {
@@ -136,7 +136,7 @@ html[theme="light"] {
   }
 
   #navbar {
-    visibility: hidden;
+    display: none;
 
     justify-content: start;
 
@@ -156,6 +156,11 @@ html[theme="light"] {
     display: grid !important;
     grid-template-columns: auto auto;
   }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 481px) {
@@ -164,6 +169,7 @@ html[theme="light"] {
   }
 
   .projects {
+    display: flex;
     flex-direction: column;
   }
 }
@@ -394,6 +400,11 @@ a {
   .project-card-text {
     max-width: 32vw;
   }
+
+  .projects {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
 }
 
 .project-card-logo {
@@ -406,13 +417,6 @@ a {
   position: relative;
   z-index: 2;
 }
-
-.projects {
-  display: grid;
-  grid-template-columns: auto auto;
-}
-
-
 
 /* Футер */
 
