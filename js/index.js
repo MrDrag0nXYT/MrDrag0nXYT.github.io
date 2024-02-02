@@ -1,10 +1,33 @@
-function toggleTheme() {
-  if (document.documentElement.hasAttribute("theme")) {
-    document.documentElement.removeAttribute("theme");
+function getSystemTheme() {
+  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    return "dark";
   } else {
-    document.documentElement.setAttribute("theme", "dark");
+    return "light";
   }
 }
+
+function toggleTheme() {
+  const theme = document.documentElement.getAttribute("theme");
+  const newTheme = theme === "dark" ? "light" : "dark";
+
+  document.documentElement.setAttribute("theme", newTheme);
+  localStorage.setItem("theme", newTheme);
+}
+
+window.addEventListener("load", () => {
+  const savedTheme = localStorage.getItem("theme");
+  const systemTheme = getSystemTheme();
+
+  if (savedTheme) {
+    document.documentElement.setAttribute("theme", savedTheme);
+  } else {
+    document.documentElement.setAttribute("theme", systemTheme);
+  }
+});
+
+
+
+// Переключение мобильного меню
 
 function toggleMobileMenu() {
   const navbar = document.getElementById("navbar");
